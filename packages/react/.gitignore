@@ -1,0 +1,11 @@
+.DS_Store
+
+# auto generated icons
+src/components/*.tsx
+src/icons.ts
+
+# build
+lib/
+dist/
+esm/
+es/
