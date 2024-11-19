@@ -7,14 +7,17 @@ function App() {
   } = ApusicUiICons;
 
   return (
-    <ul>
-      {Object.entries(allIcons).map(([name, Component]) => (
-        <li className="icon-item" key={name}>
-          <Component style={{ fontSize: 48 }} />
-          <div>{name}</div>
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2>图标列表</h2>
+      <ul>
+        {Object.entries(allIcons).map(([name, Component]) => (
+          <li className="icon-item" key={name}>
+            <Component style={{ fontSize: 48 }} />
+            <div>{name}</div>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
