@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import {
   createElement,
@@ -81,3 +82,4 @@ export const IconBase = forwardRef(
     );
   }
 );
+IconBase.displayName = "IconBase";
