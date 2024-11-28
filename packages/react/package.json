@@ -9,16 +9,25 @@
   "bugs": {
     "url": "https://github.com/lixieqing/apusic-ui-icons/issues"
   },
-  "main": "index.cjs.js",
-  "module": "dist/index.es.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/index.umd.js",
   "files": [
+    "es",
+    "lib",
     "dist"
   ],
   "scripts": {
     "prebuild": "rimraf dist/* es/* lib/*",
     "build": "cross-env NODE_ENV=production vite build"
   },
-  "keywords": [],
+  "keywords": [
+    "ApusicUi",
+    "icons",
+    "react",
+    "svg",
+    "components"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
