@@ -1,5 +1,11 @@
 # apusic-ui-icons-react
 
+## 0.1.0
+
+### Minor Changes
+
+- 更新打包构建
+
 ## 0.0.2
 
 ### Patch Changes
