@@ -10,5 +10,5 @@
 // single icon
 import { CloseIcon, ChajianIcon } from "apusic-ui-icons-react";
 
-<AlertIcon />;
+<CloseIcon />;
 ```
