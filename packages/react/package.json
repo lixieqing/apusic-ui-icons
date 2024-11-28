@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist/* es/* lib/*",
     "build": "cross-env NODE_ENV=production vite build"
   },
   "keywords": [],

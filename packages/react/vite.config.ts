@@ -10,17 +10,47 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "ApusicUIIcons",
-      formats: ["es", "cjs", "umd"],
-      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
+      output: [
+        {
+          dir: "lib",
+          entryFileNames: "index.js",
+          format: "cjs",
         },
-      },
+        {
+          dir: "es",
+          entryFileNames: "index.js",
+          format: "es",
+        },
+        {
+          dir: "dist",
+          entryFileNames: "index.umd.js",
+          name: "icons-react",
+          format: "umd",
+          globals: {
+            react: "React",
+          },
+        },
+        {
+          dir: "dist",
+          entryFileNames: "index.umd.min.js",
+          name: "icons-react",
+          format: "umd",
+          plugins: [terser()],
+          globals: {
+            react: "React",
+          },
+        },
+      ],
+
+      // output: {
+      //   globals: {
+      //     react: "React",
+      //     "react-dom": "ReactDOM",
+      //   },
+      // },
     },
     sourcemap: true,
   },
